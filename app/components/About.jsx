@@ -4,8 +4,16 @@ var React = require('react');
 var About = (props) => {
     return (
         <div>
-            <h2>About</h2>
-            <p>Welcome to the About page.</p>
+            <h1 className="text-center">About</h1>
+            <p>This app was made by <strong>Rogerio Nunes</strong> using:</p>
+            <ul>
+                <li>React.js</li>
+                <li>ES6</li>
+                <li>Webpack</li>
+                <li>Foundation</li>
+                <li>React-router</li>
+                <li>OpenWeather API</li>
+            </ul>
         </div>
     )
 };
