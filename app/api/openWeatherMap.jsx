@@ -12,14 +12,13 @@ module.exports = {
 //ES6 promises.. first's true, second's false statement.
 
        return axios.get(requestURL).then(function (res) {
-            debugger;
             if (res.data.cod && res.data.message) {
                 throw new Error(res.data.message);
             } else {
                 return res.data.main.temp;
             }
-        }, function (res) {
-            throw new Error('City not found');
+        }, function (err) {
+            throw new Error(err.response.data.message);
         });
     }
 }
